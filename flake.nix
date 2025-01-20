@@ -23,6 +23,7 @@
 
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
+      programs.zsh.enable = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -38,6 +39,9 @@
 	name = "dylan";
 	home = "/Users/dylan";
       };
+
+      system.defaults.finder.ShowPathbar = true;
+      system.defaults.finder.AppleShowAllExtensions = true;
     };
   in
   {
